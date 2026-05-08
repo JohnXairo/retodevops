@@ -1,0 +1,13 @@
+#archivodeconfiguraciondeaplicacion
+#retodevops
+server:
+  port: 8080
+
+app:
+  security:
+    api-key: 2f5ae96c-b558-4c7b-a590-a501ae1c3f6c
+    jwt-secret: ZGV2b3BzLXJldG8tc2VjcmV0LWtleS0yMDI0LXN1cGVyLXNlY3VyZQ==
+
+spring:
+  application:
+    name: retodevops
