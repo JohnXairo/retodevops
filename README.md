@@ -28,44 +28,37 @@ Spring Security gestiona la autenticación:
 
 ## Ejecutar localmente
 ```bash
-docker-compose up --build -d --scale app=2
+docker-compose up --build
 ```
 
 ## Generar JWT
 ```bash
-./generate_jwt.sh
+python3 generate_jwt.py
 ```
 
-## Prueba del endpoint
-```bash
-curl -X POST \
-  -H "X-Parse-REST-API-Key: 2f5ae96c-b558-4c7b-a590-a501ae1c3f6c" \
-  -H "X-JWT-KWY: ${JWT}" \
-  -H "Content-Type: application/json" \
-  -d '{ "message": "This is a test", "to": "Juan Perez", "from": "Rita Asturia", "timeToLifeSec": 45 }' \
-  https://${HOST}/DevOps
-```
+## Endpoint
+POST /DevOps
+Header: X-Parse-REST-API-Key: 2f5ae96c-b558-4c7b-a590-a501ae1c3f6c
+Header: X-JWT-KWY: <jwt>
+Content-Type: application/json
+{
+"message": "This is a test",
+"to": "Juan Perez",
+"from": "Rita Asturia",
+"timeToLifeSec": 45
+}
 
-## Respuesta esperada
+## Respuesta
 ```json
 {"message": "Hello Juan Perez your message will be sent"}
 ```
 
 ## Escalabilidad dinámica
 ```bash
-# Escalar a 4 nodos
-docker-compose up -d --scale app=4
-
-# Reducir a 2 nodos
-docker-compose up -d --scale app=2
+docker-compose up --scale app1=3 -d
 ```
 
-## Demo completo
-```bash
-./demo.sh
-```
-
-## CI/CD
+## Pipeline CI/CD
 - Push a cualquier rama → CI Pipeline (build + test + análisis estático)
 - Merge a main → Deploy Pipeline (automático)
 - Tag vX.Y.Z → Deploy por versión (bajo demanda)
