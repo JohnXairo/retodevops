@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.devops.reto.controller.DevOpsControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.530 s -- in com.devops.reto.controller.DevOpsControllerTest

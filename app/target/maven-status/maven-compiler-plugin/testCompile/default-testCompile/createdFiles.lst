@@ -1,0 +1,3 @@
+com/devops/reto/controller/DevOpsControllerTest.class
+com/devops/reto/security/JwtServiceTest.class
+com/devops/reto/service/DevOpsServiceTest.class

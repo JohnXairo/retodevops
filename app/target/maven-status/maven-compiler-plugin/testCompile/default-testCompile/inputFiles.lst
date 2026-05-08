@@ -1,0 +1,3 @@
+/retodevops/app/src/test/java/com/devops/reto/controller/DevOpsControllerTest.java
+/retodevops/app/src/test/java/com/devops/reto/security/JwtServiceTest.java
+/retodevops/app/src/test/java/com/devops/reto/service/DevOpsServiceTest.java
