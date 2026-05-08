@@ -27,12 +27,14 @@ Spring Security gestiona la autenticación:
 - Checkstyle (análisis estático)
 
 ## Ejecutar localmente
-##bash
+```bash
 docker-compose up --build
+```
 
 ## Generar JWT
-##bash
+```bash
 python3 generate_jwt.py
+```
 
 ## Endpoint
 POST /DevOps
@@ -47,13 +49,14 @@ Content-Type: application/json
 }
 
 ## Respuesta
-##json
+```json
 {"message": "Hello Juan Perez your message will be sent"}
-##
+```
+
 ## Escalabilidad dinámica
-##bash
+```bash
 docker-compose up --scale app1=3 -d
-##
+```
 
 ## Pipeline CI/CD
 - Push a cualquier rama → CI Pipeline (build + test + análisis estático)
