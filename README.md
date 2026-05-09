@@ -28,6 +28,7 @@ Spring Security gestiona la autenticación:
 
 ## Ejecutar localmente
 ```bash
+./setup.sh
 docker-compose up --build
 ```
 
