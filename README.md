@@ -34,7 +34,7 @@ docker-compose up --build
 
 ## Generar JWT
 ```bash
-python3 generate_jwt.py
+./generate_jwt.sh
 ```
 
 ## Endpoint
