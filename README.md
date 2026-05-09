@@ -26,8 +26,9 @@ Spring Security gestiona la autenticación:
 - JaCoCo (cobertura de código >80%)
 - Checkstyle (análisis estático)
 
-## Ejecutar localmente
+## Ejecutar localmente las configuraciones
 ```bash
+./setup.sh
 docker-compose up --build
 ```
 
