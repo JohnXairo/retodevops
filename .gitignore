@@ -30,3 +30,6 @@ replay_pid*
 # IDE
 .vscode/
 *.iml
+
+# SSL
+nginx/ssl/
